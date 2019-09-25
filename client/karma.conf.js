@@ -27,11 +27,12 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
+    browsers: ['Chrome']
+    //singleRun: false
   };
   if (process.env.TRAVIS) {
-    configuration.singleRun = true;
+    //configuration.singleRun = true;
+    configuration.autoWatch = false;
     configuration.browsers = ['ChromeHeadless'];
   }
 
